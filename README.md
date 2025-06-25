@@ -19,4 +19,3 @@ A secure backend system built with **Node.js**, **Express**, **MongoDB**, and **
 - **Swagger UI** for API docs
 - **Render** for deployment
 
-## 📦 Project Structure
