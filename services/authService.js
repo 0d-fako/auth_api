@@ -4,7 +4,7 @@ const {
   findUserByEmail,
   createUser,
   findUserById
-} = require('../repositories/userRepository');
+} = require('../repository/userRepository');
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
