@@ -8,6 +8,10 @@ const {
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
+console.log('[DEBUG] JWT_SECRET:', JWT_SECRET);
+if (!JWT_SECRET) throw new Error('JWT_SECRET is missing from environment variables');
+
+
 const registerUser = async (userData) => {
   const existing = await findUserByEmail(userData.email);
   if (existing) {
