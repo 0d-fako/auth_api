@@ -13,12 +13,12 @@ app.use(express.json());
 
 
 app.use('/api', authRoutes);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('./swagger.json', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));
+    app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
   })
-  .catch(err => console.error('❌ DB connection failed:', err.message));
+  .catch(err => console.error('DB connection failed:', err.message));
