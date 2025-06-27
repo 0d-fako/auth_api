@@ -12,7 +12,7 @@ const createUser = async (userData) => {
 
 
 const findUserById = async (userId) => {
-  return await User.findById(userId).select('-password'); // exclude password
+  return await User.findById(userId).select('-password'); 
 };
 
 module.exports = {
